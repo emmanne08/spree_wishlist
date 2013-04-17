@@ -6,6 +6,7 @@ sv:
   create_new_wishlist: "Skapa nytt önskelista"
   creating_wishlist: "Skapa önskelista"
   date_added: "Datum tillagd"
+  default_wishlist_name: "Önskelista"
   delete_wishlist: "Ta bort önskelista"
   edit_wishlist: "Redigera önskelista"
   editing_wishlist: "Redigerar önskelistan"
