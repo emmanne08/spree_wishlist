@@ -1,12 +1,12 @@
 class Spree::Wishlist < ActiveRecord::Base
-  belongs_to :user, :class_name => Spree.user_class 
+  belongs_to :user, class_name: Spree.user_class
   has_many :wished_products
   before_create :set_access_hash
 
   attr_accessible :name, :is_default, :is_private, :user
-    
-  validates :name, :presence => true
-  
+
+  validates :name, presence: true
+
   attr_accessible :name, :is_default, :is_private
 
   def include?(variant_id)
@@ -28,7 +28,7 @@ class Spree::Wishlist < ActiveRecord::Base
   def is_default=(value)
     self['is_default'] = value
     if self.is_default?
-      Spree::Wishlist.update_all({:is_default => false}, ["id != ? AND is_default = ? AND user_id = ?", self.id, true, self.user_id])
+      Spree::Wishlist.update_all({is_default: false}, ['id != ? AND is_default = ? AND user_id = ?', self.id, true, self.user_id])
     end
   end
 
@@ -36,10 +36,10 @@ class Spree::Wishlist < ActiveRecord::Base
     !self.is_private?
   end
 
-  private
+private
 
   def set_access_hash
     random_string = SecureRandom::hex(16)
     self.access_hash = Digest::SHA1.hexdigest("--#{user_id}--#{random_string}--#{Time.now}--")
-  end  
+  end
 end

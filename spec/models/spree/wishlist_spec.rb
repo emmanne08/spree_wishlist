@@ -1,19 +1,19 @@
-require File.dirname(__FILE__) + '/../../spec_helper'
+require 'spec_helper'
 
 describe Spree::Wishlist do
-  before(:each) do
-    @user = Factory(:user)
-    @wishlist = Spree::Wishlist.new(:user => @user, :name => "My Wishlist")
+  before do
+    @user = create(:user)
+    @wishlist = Spree::Wishlist.new(user: @user, name: "My Wishlist")
   end
 
   context "can't mass assign ids" do
     it "should not be able to assign variant_id" do
-      lambda {
-        Spree::Wishlist.new(:user_id => @user.id, :name => "My Wishlist")  
-      }.should raise_error
+      expect {
+        Spree::Wishlist.new(user_id: @user.id, name: "My Wishlist")
+      }.to raise_error
     end
   end
-  
+
   context "creating a new wishlist" do
     it "is valid with valid attributes" do
       @wishlist.should be_valid
@@ -26,9 +26,9 @@ describe Spree::Wishlist do
   end
 
   context "#include?" do
-    before(:each) do
-      @variant = Factory(:variant)
-      wished_product = Spree::WishedProduct.new(:variant => @variant)
+    before do
+      @variant = create(:variant)
+      wished_product = Spree::WishedProduct.new(variant: @variant)
       @wishlist.wished_products << wished_product
       @wishlist.save
     end
@@ -37,7 +37,7 @@ describe Spree::Wishlist do
       @wishlist.include?(@variant.id).should be_true
     end
   end
-  
+
   context "#to_param" do
     it "should return the wishlist's access_hash" do
       @wishlist.to_param.should == @wishlist.access_hash
@@ -46,7 +46,7 @@ describe Spree::Wishlist do
 
   context "#can_be_read_by?" do
     context "when the wishlist is private" do
-      before(:each) do
+      before do
         @wishlist.is_private = true
       end
 
@@ -55,7 +55,7 @@ describe Spree::Wishlist do
       end
 
       it "is false when the user does not own the wishlist" do
-        other_user = Factory(:user)
+        other_user = create(:user)
         @wishlist.can_be_read_by?(other_user).should be_false
       end
     end
@@ -63,7 +63,7 @@ describe Spree::Wishlist do
     context "when the wishlist is public" do
       it "is true for any user" do
         @wishlist.is_private = false
-        other_user = Factory(:user)
+        other_user = create(:user)
         @wishlist.can_be_read_by?(other_user).should be_true
       end
     end

@@ -77,12 +77,12 @@ describe WishlistAbility do
 
   #context "for Wishlist" do
     #context "private" do
-      #let(:resource) { Spree::Wishlist.new(:is_private => true) }
+      #let(:resource) { Spree::Wishlist.new(is_private: true) }
       #pending
     #end
 
     #context "public" do
-      #let(:resource) { Spree::Wishlist.new(:is_private => false) }
+      #let(:resource) { Spree::Wishlist.new(is_private: false) }
       #context "requested by same user" do
         #before { resource.user = user }
         #pending
@@ -91,7 +91,6 @@ describe WishlistAbility do
       #context "requested by other user" do
         #pending
       #end
-
     #end
   #end
 end

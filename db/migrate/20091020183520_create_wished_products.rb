@@ -1,5 +1,5 @@
 class CreateWishedProducts < ActiveRecord::Migration
-  def self.up
+  def change
     create_table :wished_products do |t|
       t.references :variant
       t.references :wishlist
@@ -7,9 +7,5 @@ class CreateWishedProducts < ActiveRecord::Migration
 
       t.timestamps
     end
-  end
-
-  def self.down
-    drop_table :wished_products
   end
 end

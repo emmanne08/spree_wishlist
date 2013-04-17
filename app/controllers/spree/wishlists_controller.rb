@@ -2,7 +2,7 @@ class Spree::WishlistsController < Spree::StoreController
   helper 'spree/products'
 
   respond_to :html
-  respond_to :js, :only => [:update]
+  respond_to :js, only: [:update]
 
   def new
     @wishlist = Spree::Wishlist.new
@@ -15,7 +15,7 @@ class Spree::WishlistsController < Spree::StoreController
 
     respond_with(@wishlist)
   end
-  
+
   def edit
     @wishlist = Spree::Wishlist.find_by_access_hash(params[:id])
 
@@ -34,15 +34,15 @@ class Spree::WishlistsController < Spree::StoreController
 
     respond_with(@wishlist)
   end
-  
+
   def default
     @wishlist = current_user.wishlist
-    
-    respond_with(@wishlist)do |format|
-      format.html { render 'show' }
+
+    respond_with(@wishlist) do |format|
+      format.html { render :show }
     end
   end
-  
+
   def create
     @wishlist = Spree::Wishlist.new(params[:wishlist])
     @wishlist.user = current_user
@@ -54,9 +54,8 @@ class Spree::WishlistsController < Spree::StoreController
   def destroy
     @wishlist = Spree::Wishlist.find_by_access_hash(params[:id])
     @wishlist.destroy
-    respond_with(@wishlist )do |format|
+    respond_with(@wishlist) do |format|
       format.html { redirect_to account_path }
     end
   end
-
 end
