@@ -32,4 +32,3 @@ class WishlistAbility
     end
   end
 end
-

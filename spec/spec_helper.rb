@@ -1,22 +1,26 @@
 require 'simplecov'
+require 'coveralls'
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
+  SimpleCov::Formatter::HTMLFormatter,
+  Coveralls::SimpleCov::Formatter
+]
 SimpleCov.start do
   add_group 'Controllers', 'app/controllers'
   add_group 'Helpers', 'app/helpers'
   add_group 'Mailers', 'app/mailers'
   add_group 'Models', 'app/models'
+  add_group 'Overrides', 'app/overrides'
   add_group 'Views', 'app/views'
   add_group 'Libraries', 'lib'
-end
+end if ENV["COVERAGE"]
 
 ENV["RAILS_ENV"] = 'test'
 
 require File.expand_path('../dummy/config/environment.rb',  __FILE__)
+
 require 'rspec/rails'
 require 'ffaker'
 require 'database_cleaner'
-
-# Run any available migration
-ActiveRecord::Migrator.migrate File.expand_path('../dummy/db/migrate/', __FILE__)
 
 Dir[File.join(File.dirname(__FILE__), 'support/**/*.rb')].each { |f| require f }
 
