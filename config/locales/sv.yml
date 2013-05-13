@@ -1,28 +1,28 @@
 ---
 sv:
-  add_to_wishlist: "Lägg till i önskelistan"
-  are_you_sure_wishlist: "Är du säker på att du vill ta bort denna önskelista?"
-  availability: Tillgänglighet
-  create_new_wishlist: "Skapa nytt önskelista"
-  creating_wishlist: "Skapa önskelista"
-  date_added: "Datum tillagd"
-  default_wishlist_name: "Önskelista"
-  delete_wishlist: "Ta bort önskelista"
-  edit_wishlist: "Redigera önskelista"
-  editing_wishlist: "Redigerar önskelistan"
-  in_stock: "I lager"
-  is_default: "Är standard"
-  is_private: "Är privat"
-  item_added_to_wishlist: "Objekt har lagts till i önskelistan"
-  item_view: Visa
-  move: Flytta
-  move_to_another_wishlist: "Flytta till en annan önskelista"
-  my_wishlists: "Mina önskelistor"
-  private: Privat
-  private_wishlist: "Privat önskelista"
-  public: Offentlig
-  public_wishlist: "Offentlig önskelista"
-  remove_from_wishlist: "Ta bort från önskelistan"
-  update_quantity: "Uppdatera antal"
-  wishlist_actions: Åtgärder
-  your_wishlist_is_empty: "Din önskelista är tom"
+  spree:
+    add_to_wishlist: "Lägg till i önskelistan"
+    are_you_sure_wishlist: "Är du säker på att du vill ta bort denna önskelista?"
+    availability: Tillgänglighet
+    create_new_wishlist: "Skapa nytt önskelista"
+    creating_wishlist: "Skapa önskelista"
+    date_added: "Datum tillagd"
+    delete_wishlist: "Ta bort önskelista"
+    edit_wishlist: "Redigera önskelista"
+    editing_wishlist: "Redigerar önskelistan"
+    in_stock: "I lager"
+    is_default: "Är standard"
+    is_private: "Är privat"
+    item_view: Visa
+    move: Flytta
+    move_to_another_wishlist: "Flytta till en annan önskelista"
+    my_wishlists: "Mina önskelistor"
+    private: Privat
+    private_wishlist: "Privat önskelista"
+    public: Offentlig
+    public_wishlist: "Offentlig önskelista"
+    remove_from_wishlist: "Ta bort från önskelistan"
+    update_quantity: "Uppdatera antal"
+    wishlist_actions: Åtgärder
+    your_wishlist_is_empty: "Din önskelista är tom"
+    item_added_to_wishlist: "Objekt har lagts till i önskelistan"
