@@ -4,12 +4,9 @@ before_script:
   - export DISPLAY=:99.0
   - bundle exec rake test_app
 env:
-  - DB=sqlite
-  - DB=mysql
-  - DB=postgres
   - COVERAGE=true
 script:
-  - bundle exec rake spec
+  - bundle exec rake
 notifications:
   email:
     - hi@futhr.io
