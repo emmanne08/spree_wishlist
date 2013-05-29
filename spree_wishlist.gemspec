@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.description  = s.summary
   s.required_ruby_version = '>= 1.9.3'
 
-  s.authors      = 'John Dyer'
+  s.author       = 'John Dyer'
   s.email        = 'jdyer@spreecommerce.com'
   s.homepage     = 'https://github.com/spree/spree_wishlist'
   s.license      = 'BSD'
@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  spree_version  = '~> 2.0.0.beta'
+  spree_version  = '~> 2.1.0.beta'
   s.add_runtime_dependency 'spree_core', spree_version
   s.add_runtime_dependency 'spree_frontend', spree_version
   s.add_runtime_dependency 'spree_api', spree_version
