@@ -20,14 +20,14 @@ gem 'spree_email_to_friend', github: 'spree/spree_email_to_friend'
 
 3. To setup the asset pipeline includes and copy migrations run: `rails g spree_wishlist:install`
 
-## Development
+## Contributing
 
-  * Fork the repo
-  * Clone your repo
-  * Run `bundle`
-  * Run `bundle exec rake test_app` to create the test application in `spec/test_app`
-  * Make your changes
-  * Ensure specs pass by running `bundle exec rake`
-  * Submit your pull request
+* Fork the repo
+* Clone your repo
+* Run `bundle`
+* Run `bundle exec rake test_app` to create the test application in `spec/test_app`
+* Make your changes and follow this [Style Guide](https://github.com/thoughtbot/guides)
+* Ensure specs pass by running `bundle exec rake`
+* Submit your pull request
 
-Copyright (c) 2013 John Dyer, released under the New BSD License
+Copyright (c) 2013 John Dyer, released under the [New BSD License](https://github.com/futhr/spree_wishlist/blob/master/LICENSE)
