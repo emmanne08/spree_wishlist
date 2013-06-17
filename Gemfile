@@ -17,6 +17,6 @@ end
 
 gem 'spree', github: 'spree/spree'
 
-gem 'spree_auth_devise', path: '../spree_auth_devise'
+gem 'spree_auth_devise', github: 'futhr/spree_auth_devise'
 
 gemspec
