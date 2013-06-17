@@ -38,7 +38,7 @@ class Spree::WishlistsController < Spree::StoreController
   def default
     @wishlist = spree_current_user.wishlist
 
-    respond_with(@wishlist)do |format|
+    respond_with(@wishlist) do |format|
       format.html { render :show }
     end
   end
