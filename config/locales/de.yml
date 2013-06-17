@@ -22,7 +22,7 @@ de:
     public_wishlist: "Öffentliche Wunschlisten"
     public: "Öffentlich"
     remove_from_wishlist: "Von Wunschliste entfernen"
-    wishlist_actions: ""
+    wishlist_actions: "Aktionen"
     your_wishlist_is_empty: "Deine Wunschliste ist leer"
     update_quantity: "Ändere Menge"
     item_added_to_wishlist: "Artikel wurde zur Wunschliste hinzugefügt"
