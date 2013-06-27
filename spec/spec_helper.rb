@@ -1,4 +1,4 @@
-if ENV["COVERAGE"]
+if ENV['COVERAGE']
   require 'simplecov'
   require 'coveralls'
   SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
@@ -10,17 +10,17 @@ if ENV["COVERAGE"]
     add_group 'Controllers', 'app/controllers'
     add_group 'Models', 'app/models'
     add_group 'Overrides', 'app/overrides'
-    add_group 'Views', 'app/views'
     add_group 'Libraries', 'lib'
   end
 end
 
-ENV["RAILS_ENV"] = 'test'
+ENV['RAILS_ENV'] = 'test'
 
 require File.expand_path('../dummy/config/environment.rb',  __FILE__)
 
 require 'rspec/rails'
 require 'capybara/rspec'
+require 'capybara/webkit'
 require 'ffaker'
 require 'database_cleaner'
 
@@ -31,7 +31,7 @@ require 'spree/testing_support/factories'
 require 'spree/testing_support/controller_requests'
 require 'spree/testing_support/url_helpers'
 
-Dir[File.join(File.dirname(__FILE__), 'factories/*.rb')].each { |f| require f }
+FactoryGirl.find_definitions
 
 RSpec.configure do |config|
   config.include Capybara::DSL, type: :request
@@ -58,4 +58,6 @@ RSpec.configure do |config|
   config.after do
     DatabaseCleaner.clean
   end
+
+  Capybara.javascript_driver = :webkit
 end
