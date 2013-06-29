@@ -8,7 +8,7 @@ The Spree Wishlist extension enables multiple wishlists per user, as well as man
 
 ## Installation
 
-1. Add the following to your Gemfile
+1. Add the following to your `Gemfile`:
 ```ruby
 gem 'spree_wishlist', github: 'spree/spree_wishlist'
 gem 'spree_email_to_friend', github: 'spree/spree_email_to_friend'
@@ -29,6 +29,7 @@ Here are some ways *you* can contribute:
 * by using prerelease versions
 * by reporting [bugs][2]
 * by suggesting new features
+* by writing [translations][4]
 * by writing or editing documentation
 * by writing specifications
 * by writing code (*no patch is too small*: fix typos, add comments, clean up inconsistent whitespace)
@@ -40,7 +41,7 @@ Starting point:
 
 * Fork the repo
 * Clone your repo
-* Run `bundle`
+* Run `bundle install`
 * Run `bundle exec rake test_app` to create the test application in `spec/test_app`
 * Make your changes
 * Ensure specs pass by running `bundle exec rspec spec`
@@ -51,3 +52,4 @@ Copyright (c) 2013 John Dyer, released under the [New BSD License][3]
 [1]: http://www.fsf.org/licensing/essays/free-sw.html
 [2]: https://github.com/futhr/spree_wishlist/issues
 [3]: https://github.com/futhr/spree_wishlist/tree/master/LICENSE
+[4]: http://www.localeapp.com/projects/4915
