@@ -1,6 +1,6 @@
 class Spree::Wishlist < ActiveRecord::Base
   belongs_to :user, class_name: Spree.user_class
-  has_many :wished_products
+  has_many :wished_products, class_name: 'Spree::WishedProduct'
   before_create :set_access_hash
 
   validates :name, presence: true
@@ -34,7 +34,7 @@ class Spree::Wishlist < ActiveRecord::Base
     !self.is_private?
   end
 
-private
+  private
 
   def set_access_hash
     random_string = SecureRandom::hex(16)
