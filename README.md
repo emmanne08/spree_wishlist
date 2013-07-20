@@ -51,5 +51,5 @@ Copyright (c) 2013 John Dyer, released under the [New BSD License][3]
 
 [1]: http://www.fsf.org/licensing/essays/free-sw.html
 [2]: https://github.com/futhr/spree_wishlist/issues
-[3]: https://github.com/futhr/spree_wishlist/tree/master/LICENSE
+[3]: https://github.com/futhr/spree_wishlist/tree/master/LICENSE.md
 [4]: http://www.localeapp.com/projects/4915
