@@ -13,14 +13,14 @@ describe Spree::WishlistsController do
     controller.should be_an_instance_of(Spree::WishlistsController)
   end
 
-  context "GET#new" do
+  context "#new" do
     it "assigns a new wishlist as @wishlist" do
       spree_get :new
       assigns(:wishlist).should be_a_new Spree::Wishlist
     end
   end
 
-  context "GET#index" do
+  context "#index" do
     it "assigns all wishlists as @wishlists" do
       pending "empty array? probably need to fix factory so its populated correctly"
       spree_get :index
@@ -28,14 +28,14 @@ describe Spree::WishlistsController do
     end
   end
 
-  context "GET#edit" do
+  context "#edit" do
     it "assigns the requested wishlist as @wishlist" do
       spree_get :edit, id: wishlist
       assigns(:wishlist).should eq wishlist
     end
   end
 
-  context "PUT#update" do
+  context "#update" do
     context "with valid params" do
       it "updates the requested wishlist" do
         Spree::Wishlist.any_instance.should_receive(:update_attributes).with({ 'these' => 'params' })
@@ -64,14 +64,14 @@ describe Spree::WishlistsController do
     end
   end
 
-  context "GET#show" do
+  context "#show" do
     it "assigns the requested wishlist as @wishlist" do
       spree_get :show, id: wishlist
       assigns(:wishlist).should eq wishlist
     end
   end
 
-  pending "GET#default" do
+  pending "#default" do
     it "assigns the requested wishlist as @wishlist" do
       spree_get :default
       assigns(:wishlist).should eq wishlist
@@ -79,7 +79,7 @@ describe Spree::WishlistsController do
     it { response.should render_template :show }
   end
 
-  context "POST#create" do
+  context "#create" do
     context "with valid params" do
       it "creates a new Spree::Wishlist" do
         expect {
@@ -110,7 +110,7 @@ describe Spree::WishlistsController do
     end
   end
 
-  context "DELETE#destroy" do
+  context "#destroy" do
     it "destroys the requested wishlist" do
       expect {
         spree_delete :destroy, id: wishlist

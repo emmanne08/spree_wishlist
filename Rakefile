@@ -1,4 +1,3 @@
-# coding: utf-8
 require 'rubygems'
 require 'rake'
 require 'rake/testtask'
@@ -21,11 +20,4 @@ desc 'Generates a dummy app for testing'
 task :test_app do
   ENV['LIB_NAME'] = 'spree_wishlist'
   Rake::Task['common:test_app'].invoke('Spree::User')
-end
-
-namespace :test_app do
-  desc 'Rebuild test database'
-  task :rebuild do
-    system 'cd spec/dummy && rake db:drop db:migrate RAILS_ENV=test'
-  end
 end

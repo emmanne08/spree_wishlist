@@ -1,13 +1,11 @@
 require 'spec_helper'
 
-describe "Wished Products", js: true do
+feature "Wished Products", js: true do
   stub_authorization!
 
-  before do
-
+  background do
   end
 
-  context "" do
-
+  scenario "" do
   end
 end

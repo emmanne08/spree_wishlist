@@ -9,11 +9,11 @@ describe Spree::WishedProductsController do
 
   before { controller.stub spree_current_user: user }
 
-  it "should use Spree::WishedProductsController" do
+  it "use Spree::WishedProductsController" do
     controller.should be_an_instance_of(Spree::WishedProductsController)
   end
 
-  context "POST#create" do
+  context "#create" do
     context "with valid params" do
       it "creates a new Spree::WishedProduct" do
         expect {
@@ -45,7 +45,7 @@ describe Spree::WishedProductsController do
     end
   end
 
-  context "PUT#update" do
+  context "#update" do
     context "with valid params" do
       it "updates the requested wished_product" do
         pending "Expected response to be a redirect to <http://test.host/wished_products/1> but was a redirect to <http://test.host/wishlists/fb0fd8dc676b1bae7bd3af078409dc1b8396f4f2>"
@@ -76,7 +76,7 @@ describe Spree::WishedProductsController do
     end
   end
 
-  context "GET#show" do
+  context "#show" do
     it "assigns the requested wished_product as @wished_product" do
       pending "Expected response to be a redirect to <http://test.host/wished_products/1> but was a redirect to <http://test.host/wishlists/0ba9bd75e175cd5c149801076cb9469f653e88f6>"
       spree_get :show, id: wished_product
@@ -84,7 +84,7 @@ describe Spree::WishedProductsController do
     end
   end
 
-  context "DELETE#destroy" do
+  context "#destroy" do
     it "destroys the requested wished_product" do
       pending "Expected response to be a redirect to <http://test.host/wished_products/1> but was a redirect to <http://test.host/wishlists/63af1822fac11102b51c377e7f3ee0e98e2b3d2b>"
       expect {
