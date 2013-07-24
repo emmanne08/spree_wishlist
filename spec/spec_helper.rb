@@ -33,6 +33,7 @@ require 'spree/testing_support/controller_requests'
 require 'spree/testing_support/authorization_helpers'
 require 'spree/testing_support/url_helpers'
 require 'spree/testing_support/capybara_ext'
+require 'capybara_helper'
 
 FactoryGirl.find_definitions
 
@@ -40,6 +41,7 @@ RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
   config.include Spree::TestingSupport::UrlHelpers
   config.include Spree::TestingSupport::ControllerRequests
+  config.include CapybaraHelper
 
   config.extend Spree::TestingSupport::AuthorizationHelpers::Request, type: :feature
 

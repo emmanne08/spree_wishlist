@@ -5,16 +5,11 @@ feature "Edit Wishlist" do
   given(:user) { wishlist.user }
 
   background do
-    visit "/login"
-    within "#new_spree_user" do
-      fill_in "Email", with: user.email
-      fill_in "Password", with: user.password
-    end
-    click_button "Login"
+    capybara_login
   end
 
   scenario "edit a wishlist's name" do
-    visit "/account"
+    visit spree.account_path
     click_link "#{wishlist.name}"
     click_link "Edit wishlist"
     fill_in "Name", with: "A New Wishlist Name"
@@ -27,7 +22,7 @@ feature "Edit Wishlist" do
       wishlist.is_private = true
       wishlist.save
       # wishlist.update(is_private: true) throws up a NoMethodError
-      visit "/account"
+      visit spree.account_path
       click_link "#{wishlist.name}"
       click_link "Edit wishlist"
       uncheck "is private"
@@ -38,7 +33,7 @@ feature "Edit Wishlist" do
     scenario "set wishlist from public to private" do
       wishlist.is_private = false
       wishlist.save
-      visit "/account"
+      visit spree.account_path
       click_link "#{wishlist.name}"
       click_link "Edit wishlist"
       check "is private"
@@ -51,7 +46,7 @@ feature "Edit Wishlist" do
     scenario "set wishlist from default to non-default" do
       wishlist.is_default = true
       wishlist.save
-      visit "/account"
+      visit spree.account_path
       click_link "#{wishlist.name}"
       click_link "Edit wishlist"
       uncheck "is default"
@@ -63,7 +58,7 @@ feature "Edit Wishlist" do
     scenario "set wishlist from non-default to default" do
       wishlist.is_default = false
       wishlist.save
-      visit "/account"
+      visit spree.account_path
       click_link "#{wishlist.name}"
       click_link "Edit wishlist"
       check "is default"
