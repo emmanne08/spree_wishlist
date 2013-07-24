@@ -1,8 +1,8 @@
 # Spree Wishlist
 
-[![Build Status](https://travis-ci.org/futhr/spree_wishlist.png)](https://travis-ci.org/futhr/spree_wishlist)
+[![Build Status](https://travis-ci.org/futhr/spree_wishlist.png?branch=2-0-stable)](https://travis-ci.org/futhr/spree_wishlist)
 [![Dependency Status](https://gemnasium.com/futhr/spree_wishlist.png)](https://gemnasium.com/futhr/spree_wishlist)
-[![Coverage Status](https://coveralls.io/repos/futhr/spree_wishlist/badge.png?branch=master)](https://coveralls.io/r/futhr/spree_wishlist)
+[![Coverage Status](https://coveralls.io/repos/futhr/spree_wishlist/badge.png?branch=2-0-stable)](https://coveralls.io/r/futhr/spree_wishlist)
 
 The Spree Wishlist extension enables multiple wishlists per user, as well as managing those as public (sharable) and private. It also includes the ability to notify a friend via email of a recommended product.
 
@@ -10,8 +10,8 @@ The Spree Wishlist extension enables multiple wishlists per user, as well as man
 
 1. Add the following to your `Gemfile`:
 ```ruby
-gem 'spree_wishlist', github: 'spree/spree_wishlist'
-gem 'spree_email_to_friend', github: 'spree/spree_email_to_friend'
+gem 'spree_wishlist', github: 'futhr/spree_wishlist'
+gem 'spree_email_to_friend', github: 'futhr/spree_email_to_friend'
 ```
 
 2. Run
@@ -51,5 +51,5 @@ Copyright (c) 2013 John Dyer, released under the [New BSD License][3]
 
 [1]: http://www.fsf.org/licensing/essays/free-sw.html
 [2]: https://github.com/futhr/spree_wishlist/issues
-[3]: https://github.com/futhr/spree_wishlist/tree/master/LICENSE.md
+[3]: https://github.com/futhr/spree_wishlist/blob/2-0-stable/LICENSE.md
 [4]: http://www.localeapp.com/projects/4915
