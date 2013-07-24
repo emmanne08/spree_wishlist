@@ -4,7 +4,7 @@ feature "Create Wishlist" do
   given(:user){ create(:user) }
 
   background do
-    capybara_login
+    spree_login! user
   end
 
   # user uses a product's "Add to wishlist" button to create a new wishlist

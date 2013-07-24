@@ -4,9 +4,11 @@ feature "Delete Wishlist" do
   given(:wishlist) { create(:wishlist) }
   given(:user) { wishlist.user }
 
-  scenario "delete a user's wishlist" do
-    capybara_login
+  background do
+    spree_login! user
+  end
 
+  scenario "delete a user's wishlist" do
     visit spree.account_path
     click_link "#{wishlist.name}"
     click_link "Edit wishlist"

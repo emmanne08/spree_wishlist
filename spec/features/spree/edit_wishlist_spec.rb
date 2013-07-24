@@ -5,7 +5,7 @@ feature "Edit Wishlist" do
   given(:user) { wishlist.user }
 
   background do
-    capybara_login
+    spree_login! user
   end
 
   scenario "edit a wishlist's name" do
