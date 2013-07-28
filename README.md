@@ -8,10 +8,10 @@ The Spree Wishlist extension enables multiple wishlists per user, as well as man
 
 ## Installation
 
-1. Add the following to your `Gemfile`:
+1. Add the following to your `Gemfile`
 ```ruby
-gem 'spree_wishlist', github: 'futhr/spree_wishlist'
-gem 'spree_email_to_friend', github: 'futhr/spree_email_to_friend'
+gem 'spree_wishlist', github: 'futhr/spree_wishlist', branch: '2-0-stable'
+gem 'spree_email_to_friend', github: 'futhr/spree_email_to_friend', branch: '2-0-stable'
 ```
 
 2. Run
@@ -47,9 +47,11 @@ Starting point:
 * Ensure specs pass by running `bundle exec rspec spec`
 * Submit your pull request
 
-Copyright (c) 2013 John Dyer, released under the [New BSD License][3]
+Copyright (c) 2013 [Spree Commerce Inc.][5] and [contributors][6], released under the [New BSD License][3]
 
 [1]: http://www.fsf.org/licensing/essays/free-sw.html
 [2]: https://github.com/futhr/spree_wishlist/issues
 [3]: https://github.com/futhr/spree_wishlist/blob/2-0-stable/LICENSE.md
 [4]: http://www.localeapp.com/projects/4915
+[5]: https://github.com/spree
+[6]: https://github.com/futhr/spree_wishlist/contributors
