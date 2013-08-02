@@ -1,5 +1,5 @@
-(function($) {
-  $('#new_spree_wished_product').on('submit', function() {
+$(function($) {
+  $('#new_wished_product').on('submit', function() {
     selected_variant_id = $('#product-variants input[type=radio]:checked').val();
     if (selected_variant_id)
     {
@@ -15,4 +15,4 @@
   $('form#change_wishlist_accessibility input[type=radio]').on('click', function() {
     $(this).parent().submit();
   });
-})(jQuery);
+});
