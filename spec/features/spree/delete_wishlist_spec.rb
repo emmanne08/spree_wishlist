@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature "Delete Wishlist" do
+feature 'Delete Wishlist' do
   given(:wishlist) { create(:wishlist) }
   given(:user) { wishlist.user }
 
@@ -8,11 +8,11 @@ feature "Delete Wishlist" do
     spree_login! user
   end
 
-  scenario "delete a user's wishlist" do
+  scenario 'delete a users wishlist' do
     visit spree.account_path
-    click_link "#{wishlist.name}"
-    click_link "Edit wishlist"
-    click_link "Delete wishlist"
-    expect(page).not_to have_content("#{wishlist.name}")
+    click_link wishlist.name
+    click_link 'Edit wishlist'
+    click_link 'Delete wishlist'
+    expect(page).not_to have_content wishlist.name
   end
 end
